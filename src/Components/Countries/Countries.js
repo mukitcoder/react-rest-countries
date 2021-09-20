@@ -6,12 +6,12 @@ const Countries = () => {
     useEffect(() =>{
         fetch ('https://restcountries.eu/rest/v2/all')
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setCountries(data))
     },[])
 
     return (
         <div>
-            <h1>Hello From Countries</h1>
+            <h1>Hello From Countries: {countries.length}</h1>
         </div>
     );
 };
