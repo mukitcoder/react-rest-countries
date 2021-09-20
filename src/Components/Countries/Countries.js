@@ -13,10 +13,10 @@ const Countries = () => {
 
   return (
     <div>
-      <h1>Hello From Countries: {countries.length}</h1>
+      <h1>Countries Found: {countries.length}</h1>
       <div className="countries-container">
         {countries.map((country) => (
-          <Country country={country}></Country>
+          <Country key={country.name} country={country}></Country>
         ))}
       </div>
     </div>
